@@ -1,1 +1,1 @@
-# It is test project for java programing
+# a project for java programing learning
