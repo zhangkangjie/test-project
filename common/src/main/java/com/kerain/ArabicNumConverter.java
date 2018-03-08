@@ -42,7 +42,7 @@ public class ArabicNumConverter {
     public static String convertLowerChineseDigtal(long num){
         return convert(num,1);
     }
-    public static String convertcapitalChineseDigtal(long num){
+    public static String convertCapitalChineseDigtal(long num){
         return convert(num,2);
     }
 
@@ -108,7 +108,7 @@ public class ArabicNumConverter {
     public static void main(String[] args) {
 
         System.out.println( convertLowerChineseDigtal(Integer.MAX_VALUE) );
-        System.out.println( convertcapitalChineseDigtal(Integer.MAX_VALUE) );
+        System.out.println( convertCapitalChineseDigtal(Integer.MAX_VALUE) );
 
 
     }
