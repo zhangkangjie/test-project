@@ -25,18 +25,19 @@ import java.util.Date;
 public class SimpleImageTest {
     public static void main(String[] args) throws FileNotFoundException {
         String classPath = SimpleImageTest.class.getResource("").getPath();
-        String src = classPath+"/image/street-scape.jpg";
-        String target = classPath+"/image/cut/"+new Date().getTime()+".jpg";
-
+//        String src = classPath+"/image/street-scape.jpg";
+//        String target = classPath+"/image/cut/"+new Date().getTime()+".jpg";
+        String src = classPath+"/image/a.gif";
+        String target = classPath+"/image/cut/"+new Date().getTime()+".gif";
 
         File fileIn = new File(src);
         FileInputStream inStream = new FileInputStream(fileIn);
 
         //x: 117.12158808933005, y: 64.11910669975184, width: 568.888888888889, height: 320.00000000000006,
         CropParameter cropParameter = new CropParameter();
-        cropParameter.setX(1f);
-        cropParameter.setY(95.94547158304269f);
-        cropParameter.setWidth(353);
+        cropParameter.setX(0);
+        cropParameter.setY(0);
+        cropParameter.setWidth(200);
         cropParameter.setHeight(198);
 
 
