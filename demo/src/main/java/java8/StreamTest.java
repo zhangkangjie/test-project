@@ -20,9 +20,12 @@ public class StreamTest {
                 new Person("zh", "", 20),
                 new Person("wo", "", 21),
                 new Person("le", "", 22),
-                new Person("li", "", 21)
+                new Person("li", "", 23),
+                new Person("li", "", 22)
         );
-
+        /*
+         * map 映射  a -> b
+         */
         //list.stream().map(Person::getFirstName).forEach(System.out::println);
         List<String> collect = list.stream().map(Person::getFirstName).collect(Collectors.toList());
         System.out.println(collect);
@@ -34,6 +37,9 @@ public class StreamTest {
 
         //list to map
         Map<String, Person> companyMap = list.stream().collect(Collectors.toMap(Person::getFirstName, person -> person));
+        Map<String, List<Person>> collect2 = list2.stream().collect(Collectors.groupingBy(Person::getFirstName));
+        System.out.println(collect2);
+
 
     }
 }
