@@ -30,5 +30,42 @@ public class FastJsonTest {
             JSONObject jsonObj = ((JSONObject) o);
             System.out.println(jsonObj.get("include"));
         }
+
+        User user = new User();
+        user.setAge(20);
+        //user.setName("xiaoming");
+
+        System.out.println(JSON.toJSONString(user));
+        ArrayList<Object> list1 = new ArrayList<>();
+        list1.add(user);
+        System.out.println(JSON.toJSONString(list1));
+
+        //String json = "{\"name\":\"null\",}"
+
+
+
+    }
+    private static class User{
+        private String name;
+        // 不序列化
+        //@JSONField(serialize = false)
+        // transient
+        private Integer age;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public Integer getAge() {
+            return age;
+        }
+
+        public void setAge(Integer age) {
+            this.age = age;
+        }
     }
 }

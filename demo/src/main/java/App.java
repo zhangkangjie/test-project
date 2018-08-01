@@ -1,13 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
 
 /**
  * Hello world!
  *
  */
 public class App {
-    private final static Pattern decorateStoreUrlPattern = Pattern.compile("369\\.com/(\\d+)/index\\.html");
+
 
     public static void main( String[] args )
     {
@@ -18,26 +17,6 @@ public class App {
 //
 //        System.out.println( s );
 
-//        String url = "http://www.i369.com/s/30.html";
-//        url ="http://www.i369.com/63/index.html";
-
-//        Matcher matcher = decorateStoreUrlPattern.matcher(url);
-//        if (matcher.find()) {
-//            int i = matcher.groupCount();
-//            for (int j = 0; j <= i; j++) {
-//                System.out.println(j+" - "+matcher.group(j));
-//            }
-//        }
-
-        //System.out.println("http://111.1".matches("http://\\w*\\.\\w*"));
-
-//        ResourceBundle resourceBundle = ResourceBundle.getBundle("t.test");
-//        String url = resourceBundle.getString("url");
-//        System.out.println(url);
-//        Enumeration<String> keys = resourceBundle.getKeys();
-//        while (keys.hasMoreElements()){
-//            System.out.println(resourceBundle.getString(keys.nextElement()));
-//        }
 
 //        System.out.println(String.valueOf(null));
 
