@@ -61,6 +61,8 @@ public class StreamTest {
         list22.remove(minPerson);
         System.out.println(list22);
 
+        list2.stream().sorted(Comparator.comparing(Person::getAge).reversed()).forEach(person -> System.out.print(person.getAge()+" "));
+
 
     }
 }

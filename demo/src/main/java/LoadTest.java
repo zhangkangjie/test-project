@@ -7,6 +7,7 @@ public class LoadTest {
     static {
         System.out.println("静态代码块");
     }
+    static int int3 = print(3);
     static int print(int i){
         System.out.println("print "+i);
         return i;
