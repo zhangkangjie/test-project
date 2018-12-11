@@ -4,4 +4,21 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <filter>
+    <filter-name>f</filter-name>
+    <filter-class>MyFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>f</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>s</servlet-name>
+    <servlet-class>MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s</servlet-name>
+    <url-pattern>/s</url-pattern>
+  </servlet-mapping>
 </web-app>
+
