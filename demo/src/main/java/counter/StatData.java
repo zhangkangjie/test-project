@@ -40,13 +40,18 @@ public class StatData implements Runnable {
             //remove ones that over max existing time
             Iterator<Long> iterator = queue.iterator();
             while (iterator.hasNext()){
+                // the farthest time will be got firstly
                 Long next = iterator.next();
                 if (now - next >maxExistingTimeMillis){
                     iterator.remove();
+                }else {
+                    break;
                 }
             }
+            Long flushIntervalMills = 1000L;
             try {
-                Thread.sleep(1000L);
+                Thread.sleep(flushIntervalMills);
+                //System.out.println("cost time :"+(System.currentTimeMillis()-now));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
