@@ -15,7 +15,7 @@ public class ArabicNumConverter {
             '六','七','八','九'
     };
     /**
-     * 中文小写 计数单位
+     * 中文小写 计数单位 权值
      */
     private static final char[] lowerCaseUnit ={
             '\u0000','十','百','千','万','亿'
@@ -109,6 +109,7 @@ public class ArabicNumConverter {
 
         System.out.println( convertLowerChineseDigtal(Integer.MAX_VALUE) );
         System.out.println( convertCapitalChineseDigtal(Integer.MAX_VALUE) );
+        System.out.println( convertCapitalChineseDigtal(100010001) );
 
 
     }

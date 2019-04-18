@@ -21,6 +21,8 @@ public class IntegerTest {
         System.out.println(i3 == i4); //false
         System.out.println(i3 == i4.intValue()); //true
 
+        System.out.printf("%s ---",123);
+
         int i = 5;
         Byte b = 5;
         System.out.println(i == b);

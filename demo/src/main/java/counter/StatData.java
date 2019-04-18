@@ -40,7 +40,7 @@ public class StatData implements Runnable {
             //remove ones that over max existing time
             Iterator<Long> iterator = queue.iterator();
             while (iterator.hasNext()){
-                // the farthest time will be got firstly
+                // the farthest time will be got first
                 Long next = iterator.next();
                 if (now - next >maxExistingTimeMillis){
                     iterator.remove();

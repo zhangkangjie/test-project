@@ -13,4 +13,9 @@ public class TestJavap {
             int a = 3;
         }
     }
+
+    void get(){
+
+    }
 }
+
