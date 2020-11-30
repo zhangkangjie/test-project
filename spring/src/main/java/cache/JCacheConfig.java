@@ -2,6 +2,7 @@ package cache;
 
 
 import org.springframework.cache.jcache.JCacheCacheManager;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.cache.CacheManager;
@@ -18,7 +19,7 @@ import javax.cache.spi.CachingProvider;
 @Configuration
 public class JCacheConfig {
 
-//    @Bean
+    @Bean
     public JCacheCacheManager jCacheCacheManager(){
         final CachingProvider cachingProvider = Caching.getCachingProvider();
 

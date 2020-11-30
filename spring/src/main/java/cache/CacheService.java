@@ -28,6 +28,12 @@ public class CacheService {
         return name;
     }
 
+    @NameCacheable
+    public String getWithMyAnnotation(String name) {
+        log.info("invoke method get() -- " + name);
+        return name;
+    }
+
     @Cacheable(value = "myCacheName2", key = "#name")
     public String get2(String name) {
         log.info("invoke method get2() -- " + name);
@@ -90,7 +96,7 @@ public class CacheService {
     }
 
 
-    @Caching(evict = {@CacheEvict(value = "myCacheName",key = "#name") ,@CacheEvict(value = "myCacheName",key = "#name2") })
+    @Caching(evict = {@CacheEvict(value = "myCacheName",key = "#name") ,@CacheEvict(value = "myCacheName",key = "#a1") })
     public String evicts(String name, String name2) {
         log.info("invoke method evicts() -- ");
         return name;

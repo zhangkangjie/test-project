@@ -37,7 +37,16 @@ public class CacheTest {
     @Test
     public void cacheable(){
         cacheService.get("jack");
+        final Cache myCacheName = cacheManager.getCache("myCacheName");
+        final Object nativeCache = myCacheName.getNativeCache();
+
         cacheService.get("jack");
+    }
+
+    @Test
+    public void cacheable2(){
+        cacheService.getWithMyAnnotation("jack");
+        cacheService.getWithMyAnnotation("jack");
     }
 
     @Test
@@ -94,7 +103,7 @@ public class CacheTest {
     public void mutiDel(){
         cacheService.get("jack");
         cacheService.get("tom");
-        cacheService.evicts("jack","tom");
+        //cacheService.evicts("jack","tom");
         cacheService.get("jack");
         cacheService.get("tom");
     }

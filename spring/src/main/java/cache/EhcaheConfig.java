@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Primary;
 @Configuration
 public class EhcaheConfig {
 
-//    @Bean
+    @Bean
 //    @Primary
     public EhCacheCacheManager ehCacheCacheManager(){
         //2.5+
