@@ -40,28 +40,22 @@ public class ArabicNumConverter {
 
 
     public static String convertLowerChineseDigtal(long num){
-        return convert(num,1);
+
+        return convert(num,lowerCaseDigtal,lowerCaseUnit);
     }
     public static String convertCapitalChineseDigtal(long num){
-        return convert(num,2);
+
+        return convert(num,capitalsDigtal,capitalUnit);
     }
 
 
     /**
      *
      */
-    public static String convert(long num,int type){
-        char[] targetDigtal;
-        char[] targetUnit;
-        if (type == 1) {
-            //小写
-            targetDigtal = lowerCaseDigtal;
-            targetUnit = lowerCaseUnit;
-        }else {
-            //大写
-            targetDigtal = capitalsDigtal;
-            targetUnit = capitalUnit;
-        }
+    public static String convert(long num,char[] digtalArr,char[] unitArr){
+        char[] targetDigtal = digtalArr;
+        char[] targetUnit = unitArr;
+
 
         char[] numChars = String.valueOf(num).toCharArray();
         char[] arr = new char[numChars.length*2];
@@ -82,23 +76,27 @@ public class ArabicNumConverter {
                 if(count >=8 && count%8 == 0){
                     //亿
                     ui = 5;
-                }else if(count>4){
-                    ui = count%4;
+                }else if(count >=4 && count%4 == 0){
+                    ui = 4;
                 }else {
-                    ui = count;
+                    ui = count%4;
                 }
 
                 //0 后 不用带计数单位
-                if (c != '0') {
-                    arr[2*i+1] = targetUnit[ui];
-                }
+//                if (c != '0' || count%4 == 0) {
+//                    arr[2*i+1] = targetUnit[ui];
+//                }
+                arr[2*i+1] = targetUnit[ui];
             }
         }
         // '一十' 省略为 ’十‘
         String str = String.valueOf(arr);
-        str = str.replaceAll("一十","十");
-        str = str.replaceAll("零\u0000零\u0000","零");
-        str = str.replaceAll("壹拾","拾");
+        str = str.replaceAll("^一十","十");
+        str = str.replaceAll("(零百)?(零十)","零");
+        str = str.replaceAll("([^零])零([^\u0000])","$1$2");
+        str = str.replaceAll("(零\u0000)+零?","零");
+        str = str.replaceAll("零$","");
+        str = str.replaceAll("^壹拾","拾");
 
 
         System.out.println(num);
@@ -108,8 +106,13 @@ public class ArabicNumConverter {
     public static void main(String[] args) {
 
         System.out.println( convertLowerChineseDigtal(Integer.MAX_VALUE) );
-        System.out.println( convertCapitalChineseDigtal(Integer.MAX_VALUE) );
-        System.out.println( convertCapitalChineseDigtal(100010001) );
+//        System.out.println( convertCapitalChineseDigtal(Integer.MAX_VALUE) );
+//        System.out.println( convertCapitalChineseDigtal(5004520) );
+//        System.out.println( convertCapitalChineseDigtal(216) );
+//        System.out.println( convertLowerChineseDigtal(216) );
+//        System.out.println( convertLowerChineseDigtal(2047403007) );
+        System.out.println( convertLowerChineseDigtal(5004520) );
+        System.out.println( convertLowerChineseDigtal(500000) );
 
 
     }
