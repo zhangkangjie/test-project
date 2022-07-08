@@ -21,9 +21,9 @@ public class FastJsonTest {
         jsonObject.put("areaLayer","bbbbb");
         jsonObject.put("include",0);
         array.add(jsonObject);
-        System.out.println(array.toJSONString());
+        System.out.println(array);
 
-        JSONArray array2 = JSONArray.parseArray(array.toJSONString());
+        JSONArray array2 = JSONArray.parseArray(array.toString());
         System.out.println(array2);
         for (Object o : array2) {
             System.out.println(o);
