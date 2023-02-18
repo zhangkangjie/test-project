@@ -1,21 +1,18 @@
 package rate;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.math.RoundingMode;
 import java.util.Random;
 
-/**
- * @author kangjie.zhang@ttpai.cn
- * @date 2023/2/16
- */
 
-public class Rate {
+
+public class Ratio {
 
     public static void main(String[] args) {
 
 
-        p("0.8",100,true,true);
+//        p("0.8",100,true,true);
+
 
     }
 
@@ -48,9 +45,6 @@ public class Rate {
                 if (enableProbability && enableBalance){
                     boolean bp1 = (accumulateValue.compareTo(new BigDecimal(1))>0 );
                     boolean bp2 = (probability && accumulateValue.subtract(BigDecimal.ONE).compareTo(new BigDecimal(-1))>0 );
-                    if (bp2){
-                        //System.out.println("-------------"+accumulateValue);
-                    }
                     if (bp1 || bp2){
                         hitTimes++;
                         accumulateValue = accumulateValue.subtract(BigDecimal.ONE);
@@ -62,14 +56,12 @@ public class Rate {
             String actualRate = new BigDecimal(hitTimes).divide(new BigDecimal(tryTimes), 4, RoundingMode.HALF_UP).toString();
 //            System.out.printf("%s \t %s \t %s\n",i,hitTimes,actualRate);
             System.out.println(actualRate);
-//            System.out.println("loop: "+i+"\ttryTimes: "+i+"\thitTimes:"+hitTimes+"\tactualRate:"+actualRate);
-//            System.out.println("----------");
         }
     }
 
 
     public static boolean probability(int x) {
-        return new Random().nextInt(99) < x;
+        return new Random().nextInt(100) < x;
     }
 
 
