@@ -4,7 +4,7 @@ package spi.service;
 import java.util.ServiceLoader;
 
 /**
- * @author kangjie.zhang@ttpai.cn
+ * @author kangjie.zhang
  * @date 2021/5/28 14:09
  */
 public class SpiDemo {

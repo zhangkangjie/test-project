@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author kangjie.zhang@ttpai.cn
+ * @author kangjie.zhang
  * @date 2019/11/20 16:25
  */
 public class EhcacheDemo {

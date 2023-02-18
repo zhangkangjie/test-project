@@ -5,7 +5,7 @@ import lombok.Data;
 
 
 /**
- * @author kangjie.zhang@ttpai.cn
+ * @author kangjie.zhang
  * @date 2019/8/6 18:53
  */
 @Data

@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author kangjie.zhang@ttpai.cn
+ * @author kangjie.zhang
  * @date 2020/5/27 13:44
  */
 @RunWith(Parameterized.class)

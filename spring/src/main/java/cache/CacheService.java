@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.Random;
 
 /**
- * @author kangjie.zhang@ttpai.cn
+ * @author kangjie.zhang
  * @date 2019/8/29 12:10
  */
 @Service

@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 /**
- * @author kangjie.zhang@ttpai.cn
+ * @author kangjie.zhang
  * @date 2020/11/19 16:36
  */
 public class SpELExample {

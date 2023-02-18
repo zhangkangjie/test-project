@@ -13,7 +13,7 @@ import javax.cache.expiry.Duration;
 import javax.cache.spi.CachingProvider;
 
 /**
- * @author kangjie.zhang@ttpai.cn
+ * @author kangjie.zhang
  * @date 2020/10/28 17:10
  */
 @Configuration

@@ -7,7 +7,7 @@ import java.util.Random;
 
 /**
  * 按比例配比
- * @author kangjie.zhang@ttpai.cn
+ * @author kangjie.zhang
  * @date 2023/2/18
  */
 public class RatioUtil {

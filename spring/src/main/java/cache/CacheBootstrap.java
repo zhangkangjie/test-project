@@ -10,7 +10,7 @@ import java.util.Collection;
 /**
  * Springframework cache
  *
- * @author kangjie.zhang@ttpai.cn
+ * @author kangjie.zhang
  * @date 2020/10/28 13:56
  */
 
